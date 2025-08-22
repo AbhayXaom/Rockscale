@@ -2,45 +2,53 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="theme-color" content="#667eea">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Rockscale.AI">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
     <title>Rockscale.AI - AI-Based Marketing & Automation</title>
     <meta name="description" content="Transform your business with AI-powered marketing automation. Rockscale.AI delivers intelligent solutions for growth and efficiency.">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="nav-container">
             <div class="nav-logo">
                 <h2>Rockscale<span class="ai-text">.AI</span></h2>
             </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#home" class="nav-link">Home</a>
+            <ul class="nav-menu" role="menubar">
+                <li class="nav-item" role="none">
+                    <a href="#home" class="nav-link" role="menuitem">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a href="#services" class="nav-link">Services</a>
+                <li class="nav-item" role="none">
+                    <a href="#services" class="nav-link" role="menuitem">Services</a>
                 </li>
-                <li class="nav-item">
-                    <a href="#features" class="nav-link">Features</a>
+                <li class="nav-item" role="none">
+                    <a href="#features" class="nav-link" role="menuitem">Features</a>
                 </li>
-                <li class="nav-item">
-                    <a href="#ai-automation" class="nav-link">AI Automation</a>
+                <li class="nav-item" role="none">
+                    <a href="#ai-automation" class="nav-link" role="menuitem">AI Automation</a>
                 </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
+                <li class="nav-item" role="none">
+                    <a href="#about" class="nav-link" role="menuitem">About</a>
                 </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
+                <li class="nav-item" role="none">
+                    <a href="#contact" class="nav-link" role="menuitem">Contact</a>
                 </li>
             </ul>
-            <div class="hamburger">
+            <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
-            </div>
+            </button>
         </div>
     </nav>
 
@@ -58,8 +66,8 @@
                     we deliver end-to-end solutions that drive real business results.
                 </p>
                 <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">Get Started</a>
-                    <a href="#features" class="btn btn-secondary">Learn More</a>
+                    <a href="#contact" class="btn btn-primary" role="button">Get Started</a>
+                    <a href="#features" class="btn btn-secondary" role="button">Learn More</a>
                 </div>
             </div>
             <div class="hero-visual">
@@ -87,44 +95,44 @@
                 <p>End-to-end solutions designed to accelerate your business growth</p>
             </div>
             <div class="services-grid">
-                <div class="service-card">
+                <div class="service-card" tabindex="0">
                     <div class="service-icon">
-                        <i class="fas fa-share-alt"></i>
+                        <i class="fas fa-share-alt" aria-hidden="true"></i>
                     </div>
                     <h3>Social Media Management</h3>
                     <p>End-to-end social media solutions including profile management, professional scripting, shooting, editing, and strategic posting across all platforms.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card" tabindex="0">
                     <div class="service-icon">
-                        <i class="fas fa-globe"></i>
+                        <i class="fas fa-globe" aria-hidden="true"></i>
                     </div>
                     <h3>Professional Website Creation</h3>
                     <p>Custom, responsive websites designed to convert visitors into customers with modern design and seamless user experience.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card" tabindex="0">
                     <div class="service-icon">
-                        <i class="fas fa-ad"></i>
+                        <i class="fas fa-ad" aria-hidden="true"></i>
                     </div>
                     <h3>Google/Meta Ads</h3>
                     <p>Strategic paid advertising campaigns on Google and Meta platforms to increase visibility, drive traffic, and boost conversions.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card" tabindex="0">
                     <div class="service-icon">
-                        <i class="fas fa-envelope"></i>
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
                     </div>
                     <h3>WhatsApp/Email Marketing</h3>
                     <p>Direct communication channels through WhatsApp and email marketing campaigns to engage customers and drive sales.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card" tabindex="0">
                     <div class="service-icon">
-                        <i class="fas fa-search"></i>
+                        <i class="fas fa-search" aria-hidden="true"></i>
                     </div>
                     <h3>SEO/LLM Optimization</h3>
                     <p>Search engine optimization and Large Language Model optimization to improve visibility and enhance AI-powered content performance.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card" tabindex="0">
                     <div class="service-icon">
-                        <i class="fas fa-handshake"></i>
+                        <i class="fas fa-handshake" aria-hidden="true"></i>
                     </div>
                     <h3>Growth Partnership</h3>
                     <p>We're not just an agency - we're your strategic growth partner, committed to your long-term success and business expansion.</p>
@@ -144,54 +152,54 @@
                 <p>At Rockscale.AI, we're not just here to provide services — we're here to understand your business deeply and craft personalized solutions that truly drive growth. Whether you're looking to scale your online presence, optimize your campaigns, or automate your workflows, we deliver results that matter.</p>
             </div>
             <div class="features-content">
-                <div class="feature-item">
+                <div class="feature-item" tabindex="0">
                     <div class="feature-icon">
-                        <i class="fas fa-rocket"></i>
+                        <i class="fas fa-rocket" aria-hidden="true"></i>
                     </div>
                     <div class="feature-text">
                         <h3>Scalable Performance</h3>
                         <p>Our strategies grow with your business. From small businesses starting out to growing brands expanding their reach, we adapt our methods to match your needs and handle every stage of your growth journey seamlessly.</p>
                     </div>
                 </div>
-                <div class="feature-item">
+                <div class="feature-item" tabindex="0">
                     <div class="feature-icon">
-                        <i class="fas fa-shield-alt"></i>
+                        <i class="fas fa-shield-alt" aria-hidden="true"></i>
                     </div>
                     <div class="feature-text">
                         <h3>Trusted Security & Reliability</h3>
                         <p>We prioritize your trust. Every campaign, workflow, and strategy we handle is executed with precision while ensuring your data and marketing assets are protected and confidential.</p>
                     </div>
                 </div>
-                <div class="feature-item">
+                <div class="feature-item" tabindex="0">
                     <div class="feature-icon">
-                        <i class="fas fa-sync-alt"></i>
+                        <i class="fas fa-sync-alt" aria-hidden="true"></i>
                     </div>
                     <div class="feature-text">
                         <h3>Real-Time Strategy Optimization</h3>
                         <p>We monitor, analyze, and adjust your campaigns in real-time to keep them aligned with changing markets and customer behavior — ensuring maximum efficiency and ROI.</p>
                     </div>
                 </div>
-                <div class="feature-item">
+                <div class="feature-item" tabindex="0">
                     <div class="feature-icon">
-                        <i class="fas fa-lightbulb"></i>
+                        <i class="fas fa-lightbulb" aria-hidden="true"></i>
                     </div>
                     <div class="feature-text">
                         <h3>Personalized Recommendations</h3>
                         <p>We don't believe in cookie-cutter solutions. By understanding your business goals and challenges, we suggest what works best for you, ensuring every step we take aligns with your vision and drives real results.</p>
                     </div>
                 </div>
-                <div class="feature-item">
+                <div class="feature-item" tabindex="0">
                     <div class="feature-icon">
-                        <i class="fas fa-headset"></i>
+                        <i class="fas fa-headset" aria-hidden="true"></i>
                     </div>
                     <div class="feature-text">
                         <h3>Dedicated Support</h3>
                         <p>From brainstorming ideas to executing campaigns, we're by your side with hands-on support and guidance — helping you overcome challenges and seize opportunities, every single time.</p>
                     </div>
                 </div>
-                <div class="feature-item">
+                <div class="feature-item" tabindex="0">
                     <div class="feature-icon">
-                        <i class="fas fa-handshake"></i>
+                        <i class="fas fa-handshake" aria-hidden="true"></i>
                     </div>
                     <div class="feature-text">
                         <h3>A Partnership for Growth</h3>
@@ -260,36 +268,36 @@
                     </div>
                 </div>
                 <div class="automation-content">
-                    <div class="automation-feature">
+                    <div class="automation-feature" tabindex="0">
                         <div class="feature-icon">
-                            <i class="fas fa-magic"></i>
+                            <i class="fas fa-magic" aria-hidden="true"></i>
                         </div>
                         <div class="feature-text">
                             <h3>Custom AI Solutions</h3>
                             <p>Tailored automation systems designed specifically for your business processes, workflows, and unique requirements.</p>
                         </div>
                     </div>
-                    <div class="automation-feature">
+                    <div class="automation-feature" tabindex="0">
                         <div class="feature-icon">
-                            <i class="fas fa-cogs"></i>
+                            <i class="fas fa-cogs" aria-hidden="true"></i>
                         </div>
                         <div class="feature-text">
                             <h3>Intelligent Workflows</h3>
                             <p>AI-powered process automation that learns, adapts, and optimizes your business operations in real-time.</p>
                         </div>
                     </div>
-                    <div class="automation-feature">
+                    <div class="automation-feature" tabindex="0">
                         <div class="feature-icon">
-                            <i class="fas fa-chart-network"></i>
+                            <i class="fas fa-chart-network" aria-hidden="true"></i>
                         </div>
                         <div class="feature-text">
                             <h3>Predictive Intelligence</h3>
                             <p>Advanced analytics and forecasting systems that anticipate trends and automate decision-making processes.</p>
                         </div>
                     </div>
-                    <div class="automation-feature">
+                    <div class="automation-feature" tabindex="0">
                         <div class="feature-icon">
-                            <i class="fas fa-robot"></i>
+                            <i class="fas fa-robot" aria-hidden="true"></i>
                         </div>
                         <div class="feature-text">
                             <h3>Smart Integration</h3>
@@ -302,8 +310,8 @@
                 <h3>Ready to Automate Your Business?</h3>
                 <p>Join the waitlist for our upcoming AI automation services and be the first to experience the future of business automation.</p>
                 <div class="cta-buttons">
-                    <a href="#contact" class="btn btn-primary">Join Waitlist</a>
-                    <a href="#contact" class="btn btn-secondary">Learn More</a>
+                    <a href="#contact" class="btn btn-primary" role="button">Join Waitlist</a>
+                    <a href="#contact" class="btn btn-secondary" role="button">Learn More</a>
                 </div>
             </div>
         </div>
@@ -322,11 +330,11 @@
                 </div>
                 <div class="about-visual">
                     <div class="tech-stack">
-                        <div class="tech-item">Social Media</div>
-                        <div class="tech-item">Web Development</div>
-                        <div class="tech-item">Digital Ads</div>
-                        <div class="tech-item">Content Creation</div>
-                        <div class="tech-item">SEO/LLM</div>
+                        <div class="tech-item" tabindex="0">Social Media</div>
+                        <div class="tech-item" tabindex="0">Web Development</div>
+                        <div class="tech-item" tabindex="0">Digital Ads</div>
+                        <div class="tech-item" tabindex="0">Content Creation</div>
+                        <div class="tech-item" tabindex="0">SEO/LLM</div>
                     </div>
                 </div>
             </div>
@@ -342,44 +350,48 @@
             </div>
             <div class="contact-content">
                 <div class="contact-form">
-                    <form id="contactForm">
+                    <form id="contactForm" novalidate>
                         <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            <label for="name" class="sr-only">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your Name" required autocomplete="name">
                         </div>
                         <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            <label for="email" class="sr-only">Your Email</label>
+                            <input type="email" id="email" name="email" placeholder="Your Email" required autocomplete="email">
                         </div>
                         <div class="form-group">
-                            <input type="text" id="company" name="company" placeholder="Company Name">
+                            <label for="company" class="sr-only">Company Name</label>
+                            <input type="text" id="company" name="company" placeholder="Company Name" autocomplete="organization">
                         </div>
                         <div class="form-group">
+                            <label for="message" class="sr-only">Message</label>
                             <textarea id="message" name="message" placeholder="Tell us about your marketing needs" rows="5" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">Send Message</button>
                     </form>
                 </div>
                 <div class="contact-info">
-                                         <div class="contact-item">
-                         <i class="fas fa-envelope"></i>
-                         <div>
-                             <h4>Email</h4>
-                             <p>rockscale.ai@gmail.com</p>
-                         </div>
-                     </div>
-                     <div class="contact-item">
-                         <i class="fas fa-phone"></i>
-                         <div>
-                             <h4>Phone</h4>
-                             <p>+91 9508745370</p>
-                         </div>
-                     </div>
-                     <div class="contact-item">
-                         <i class="fas fa-map-marker-alt"></i>
-                         <div>
-                             <h4>Location</h4>
-                             <p>Tinsukia, Assam</p>
-                         </div>
-                     </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p><a href="mailto:rockscale.ai@gmail.com">rockscale.ai@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone" aria-hidden="true"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p><a href="tel:+919508745370">+91 9508745370</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Tinsukia, Assam</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -393,34 +405,34 @@
                     <h3>Rockscale<span class="ai-text">.AI</span></h3>
                     <p>Transforming marketing through artificial intelligence and automation.</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
                     </div>
                 </div>
-                                 <div class="footer-section">
-                     <h4>Services</h4>
-                     <ul>
-                         <li><a href="#services">Social Media Management</a></li>
-                         <li><a href="#services">Professional Website Creation</a></li>
-                         <li><a href="#services">Google/Meta Ads</a></li>
-                         <li><a href="#services">WhatsApp/Email Marketing</a></li>
-                         <li><a href="#services">SEO/LLM Optimization</a></li>
-                         <li><a href="#services">Growth Partnership</a></li>
-                     </ul>
-                 </div>
-                 <div class="footer-section">
-                     <h4>Company</h4>
-                     <ul>
-                         <li><a href="#home">Home</a></li>
-                         <li><a href="#services">Services</a></li>
-                         <li><a href="#features">Features</a></li>
-                         <li><a href="#ai-automation">AI Automation</a></li>
-                         <li><a href="#about">About Us</a></li>
-                         <li><a href="#contact">Contact</a></li>
-                     </ul>
-                 </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Social Media Management</a></li>
+                        <li><a href="#services">Professional Website Creation</a></li>
+                        <li><a href="#services">Google/Meta Ads</a></li>
+                        <li><a href="#services">WhatsApp/Email Marketing</a></li>
+                        <li><a href="#services">SEO/LLM Optimization</a></li>
+                        <li><a href="#services">Growth Partnership</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#ai-automation">AI Automation</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
                 <div class="footer-section">
                     <h4>Resources</h4>
                     <ul>

@@ -7,6 +7,8 @@
 
 html {
     scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
 }
 
 body {
@@ -14,6 +16,22 @@ body {
     line-height: 1.6;
     color: #333;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+/* Screen reader only class */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
 
 .container {
@@ -93,6 +111,13 @@ body {
     display: none;
     flex-direction: column;
     cursor: pointer;
+    background: none;
+    border: none;
+    padding: 8px;
+    min-height: 44px;
+    min-width: 44px;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .bar {
@@ -101,13 +126,15 @@ body {
     background: #333;
     margin: 3px 0;
     transition: 0.3s;
+    border-radius: 2px;
 }
 
 /* Hero Section */
 .hero {
     padding: 120px 0 80px;
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    min-height: 100vh;
+    min-height: 100vh; /* Fallback */
+    min-height: calc(var(--vh, 1vh) * 100);
     display: flex;
     align-items: center;
 }
@@ -160,6 +187,14 @@ body {
     border: none;
     cursor: pointer;
     font-size: 1rem;
+    min-height: 44px;
+    min-width: 44px;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 .btn-primary {
@@ -1324,6 +1359,8 @@ body {
     .btn {
         padding: 10px 20px;
         font-size: 0.9rem;
+        min-height: 44px;
+        min-width: 44px;
     }
 
     .container {
@@ -1337,5 +1374,227 @@ body {
 
     .hero-container {
         padding: 0 15px;
+    }
+}
+
+/* Enhanced Mobile Optimizations */
+@media (max-width: 768px) {
+    /* Improved touch targets */
+    .nav-link {
+        padding: 12px 16px;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* Better mobile form inputs */
+    .form-group input,
+    .form-group textarea {
+        font-size: 16px; /* Prevents zoom on iOS */
+        padding: 16px;
+        min-height: 44px;
+    }
+    
+    /* Mobile-optimized service cards */
+    .service-card {
+        margin: 0 10px;
+        border-radius: 15px;
+    }
+    
+    /* Mobile-friendly feature items */
+    .feature-item {
+        padding: 1.5rem;
+        margin: 0 10px;
+    }
+    
+    /* Mobile-optimized buttons */
+    .hero-buttons {
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    /* Mobile contact form */
+    .contact-form {
+        margin: 0 10px;
+        padding: 2rem;
+    }
+    
+    /* Mobile footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+    
+    /* Mobile social links */
+    .social-links {
+        justify-content: center;
+        gap: 1.5rem;
+    }
+    
+    .social-links a {
+        width: 50px;
+        height: 50px;
+        min-height: 44px;
+        min-width: 44px;
+    }
+}
+
+/* Extra Small Mobile Devices */
+@media (max-width: 375px) {
+    .hero-title {
+        font-size: 1.8rem;
+        line-height: 1.3;
+    }
+    
+    .hero-description {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+    
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .container {
+        padding: 0 10px;
+    }
+    
+    .service-card,
+    .feature-item {
+        padding: 1.25rem;
+        margin: 0 5px;
+    }
+    
+    .btn {
+        padding: 12px 24px;
+        font-size: 0.95rem;
+    }
+}
+
+/* Landscape Mobile Optimization */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero {
+        padding: 80px 0 60px;
+        min-height: auto;
+    }
+    
+    .hero-container {
+        gap: 1.5rem;
+    }
+    
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    
+    .hero-description {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* High DPI Mobile Devices */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .service-icon,
+    .feature-icon,
+    .automation-feature .feature-icon {
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
+
+/* Mobile Performance Optimizations */
+@media (max-width: 768px) {
+    /* Reduce animations on mobile for better performance */
+    .ai-animation,
+    .ai-brain {
+        animation: none;
+    }
+    
+    .node,
+    .connection,
+    .neural-path,
+    .data-flow {
+        animation-duration: 4s;
+    }
+    
+    /* Optimize shadows for mobile */
+    .service-card,
+    .feature-item,
+    .contact-form {
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Reduce hover effects on mobile */
+    .service-card:hover,
+    .feature-item:hover {
+        transform: none;
+    }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .btn:hover,
+    .service-card:hover,
+    .feature-item:hover {
+        transform: none;
+    }
+    
+    .btn:active,
+    .service-card:active,
+    .feature-item:active {
+        transform: scale(0.98);
+    }
+    
+    /* Better touch feedback */
+    .btn:active {
+        background: rgba(102, 126, 234, 0.9);
+    }
+    
+    .service-card:active,
+    .feature-item:active {
+        background: #f8f9fa;
+    }
+}
+
+/* Mobile Accessibility Improvements */
+@media (max-width: 768px) {
+    /* Focus indicators for mobile */
+    .service-card:focus,
+    .feature-item:focus,
+    .tech-item:focus {
+        outline: 2px solid #667eea;
+        outline-offset: 2px;
+    }
+    
+    /* Better contrast for mobile */
+    .hero-description {
+        color: #555;
+    }
+    
+    .section-header p {
+        color: #555;
+    }
+    
+    /* Mobile-friendly spacing */
+    .section-header {
+        margin-bottom: 3rem;
+    }
+    
+    .services,
+    .features,
+    .ai-automation,
+    .about,
+    .contact {
+        padding: 60px 0;
     }
 }
