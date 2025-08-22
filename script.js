@@ -468,22 +468,18 @@ document.addEventListener('DOMContentLoaded', detectLowEndDevice);
 
 // Mobile touch gesture support
 let touchStartX = 0;
-let touchStartY = 0;
 
 document.addEventListener('touchstart', (e) => {
     touchStartX = e.changedTouches[0].screenX;
-    touchStartY = e.changedTouches[0].screenY;
 });
 
 document.addEventListener('touchend', (e) => {
     const touchEndX = e.changedTouches[0].screenX;
-    const touchEndY = e.changedTouches[0].screenY;
     
     const deltaX = touchEndX - touchStartX;
-    const deltaY = touchEndY - touchStartY;
     
     // Horizontal swipe detection
-    if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 50) {
+    if (Math.abs(deltaX) > 50) {
         if (deltaX > 0) {
             // Swipe right - could be used for navigation
             console.log('Swipe right detected');
