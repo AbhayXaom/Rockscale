@@ -37,7 +37,7 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 15px;
 }
 
 /* Navigation */
@@ -55,7 +55,7 @@ body {
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -142,10 +142,10 @@ body {
 .hero-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 15px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    gap: 3rem;
     align-items: center;
 }
 
@@ -277,7 +277,7 @@ body {
 /* Section Headers */
 .section-header {
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 2.5rem;
 }
 
 .section-header h2 {
@@ -296,14 +296,14 @@ body {
 
 /* Services Section */
 .services {
-    padding: 80px 0;
+    padding: 60px 0;
     background: white;
 }
 
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .service-card {
@@ -350,31 +350,15 @@ body {
 
 /* Features Section */
 .features {
-    padding: 80px 0;
+    padding: 60px 0;
     background: #f8f9fa;
 }
 
-.features-intro {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 3rem auto;
-    padding: 2rem;
-    background: white;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    border: 1px solid rgba(102, 126, 234, 0.1);
-}
 
-.features-intro p {
-    font-size: 1.2rem;
-    color: #666;
-    line-height: 1.8;
-    margin: 0;
-}
 
 .features-content {
     display: grid;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .feature-item {
@@ -417,7 +401,7 @@ body {
 
 /* AI Automation Section */
 .ai-automation {
-    padding: 80px 0;
+    padding: 60px 0;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     position: relative;
@@ -519,9 +503,9 @@ body {
 .automation-showcase {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    gap: 3rem;
     align-items: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .automation-visual {
@@ -785,14 +769,14 @@ body {
 
 /* About Section */
 .about {
-    padding: 80px 0;
+    padding: 60px 0;
     background: white;
 }
 
 .about-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    gap: 3rem;
     align-items: center;
 }
 
@@ -872,14 +856,14 @@ body {
 
 /* Contact Section */
 .contact {
-    padding: 80px 0;
+    padding: 60px 0;
     background: #f8f9fa;
 }
 
 .contact-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    gap: 3rem;
 }
 
 .contact-form {
@@ -1303,14 +1287,7 @@ body {
         font-size: 2rem;
     }
 
-    .features-intro {
-        padding: 1.5rem;
-        margin-bottom: 2rem;
-    }
 
-    .features-intro p {
-        font-size: 1.1rem;
-    }
 
     .notification {
         right: 10px;
