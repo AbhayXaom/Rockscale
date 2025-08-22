@@ -1,0 +1,32 @@
+{
+  "name": "rockscale-ai-website",
+  "version": "1.0.0",
+  "description": "AI-Based Marketing & Automation Website for Rockscale.AI",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx live-server --port=3000 --open=/",
+    "start": "npx live-server --port=3000",
+    "serve": "npx serve . -p 3000",
+    "build": "echo 'Static website - no build required'"
+  },
+  "keywords": [
+    "ai",
+    "marketing",
+    "automation",
+    "website",
+    "static",
+    "html",
+    "css",
+    "javascript"
+  ],
+  "author": "Rockscale.AI",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/rockscale-ai-website.git"
+  },
+  "homepage": "https://rockscale.ai"
+}
