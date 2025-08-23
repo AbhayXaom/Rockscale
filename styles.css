@@ -5,10 +5,16 @@
     box-sizing: border-box;
 }
 
+/* Performance optimizations */
 html {
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
+    /* Optimize for performance */
+    will-change: scroll-position;
+    /* Reduce repaints */
+    transform: translateZ(0);
+    backface-visibility: hidden;
 }
 
 body {
@@ -19,7 +25,14 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+    /* Performance optimizations */
+    will-change: auto;
+    /* Hardware acceleration */
+    transform: translateZ(0);
+    backface-visibility: hidden;
 }
+
+/* Remove duplicate - already defined above */
 
 /* Screen reader only class */
 .sr-only {
@@ -429,6 +442,8 @@ body {
     overflow: hidden !important;
     line-height: 1 !important;
     min-height: 1.2em !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
 }
 
 .animated-heading .char {
@@ -439,6 +454,28 @@ body {
     line-height: 1 !important;
     vertical-align: top !important;
     transform-origin: center !important;
+}
+
+/* Special styling for "UPCOMING" characters (first 8 characters) */
+.animated-heading .char:nth-child(-n+8) {
+    font-weight: 900 !important;
+    transform: translateY(-0.1em) !important;
+    color: #ffffff !important;
+    text-shadow: 
+        0 0 25px rgba(255, 255, 255, 1),
+        0 0 50px rgba(255, 255, 255, 0.8),
+        0 0 75px rgba(255, 255, 255, 0.6) !important;
+}
+
+/* Special styling for "AI AUTOMATION" characters (characters 10-23) */
+.animated-heading .char:nth-child(n+10):nth-child(-n+23) {
+    font-weight: 700 !important;
+    transform: translateY(0.1em) !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    text-shadow: 
+        0 0 20px rgba(255, 255, 255, 0.8),
+        0 0 40px rgba(255, 255, 255, 0.4),
+        0 0 60px rgba(255, 255, 255, 0.2) !important;
 }
 
 /* Animated Heading */
@@ -524,6 +561,14 @@ body {
         opacity: 1;
         transform: translateY(0) scale(1) rotateX(0deg);
     }
+}
+
+/* Performance optimized animations */
+.animated-heading .char {
+    /* Hardware acceleration for animations */
+    will-change: transform, opacity;
+    transform: translateZ(0);
+    backface-visibility: hidden;
 }
 
 /* Hover effect for characters */
@@ -1582,6 +1627,18 @@ body {
         justify-content: center;
     }
     
+    /* Performance optimizations for mobile */
+    .animated-heading {
+        /* Reduce animation complexity on mobile */
+        will-change: auto;
+    }
+    
+    .animated-heading .char {
+        /* Optimize animations for mobile */
+        will-change: transform, opacity;
+        transform: translateZ(0);
+    }
+    
     /* Better mobile form inputs */
     .form-group input,
     .form-group textarea {
@@ -1791,4 +1848,67 @@ body {
     .contact {
         padding: 60px 0;
     }
+}
+
+/* Performance Optimizations */
+/* Hardware acceleration for smooth animations */
+.service-card,
+.feature-item,
+.tech-item,
+.contact-form,
+.btn {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    will-change: transform;
+}
+
+/* Optimize transitions */
+.service-card:hover,
+.feature-item:hover,
+.tech-item:hover,
+.contact-form:hover {
+    will-change: transform;
+}
+
+/* Reduce animation complexity on low-end devices */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Optimize for high-performance devices */
+@media (min-resolution: 2dppx) {
+    .service-icon,
+    .feature-icon,
+    .automation-feature .feature-icon {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Smooth scrolling optimization */
+html {
+    scroll-padding-top: 80px;
+}
+
+/* Optimize images and icons */
+img,
+svg,
+i {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Reduce layout shifts */
+.service-card,
+.feature-item,
+.contact-form {
+    contain: layout style paint;
 }
