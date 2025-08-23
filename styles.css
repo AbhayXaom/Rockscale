@@ -408,20 +408,37 @@ body {
     overflow: hidden;
 }
 
+/* Container for animated heading to ensure proper centering */
+.ai-automation .section-header {
+    position: relative;
+    z-index: 2;
+}
+
+.ai-automation .section-header h2 {
+    margin: 0 auto;
+    max-width: 100%;
+    overflow: hidden;
+}
+
 /* Animated Heading */
 .animated-heading {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 3px;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: clamp(1px, 0.5vw, 3px);
     font-weight: 900;
-    font-size: 3.5rem;
+    font-size: clamp(1.5rem, 4vw, 3.5rem);
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: clamp(0.5px, 0.5vw, 2px);
     text-align: center;
     word-break: keep-all;
     white-space: nowrap;
     overflow: hidden;
+    width: 100%;
+    max-width: 100vw;
+    padding: 0 10px;
+    box-sizing: border-box;
 }
 
 .animated-heading .char {
@@ -437,7 +454,11 @@ body {
     position: relative;
     transition: all 0.3s ease;
     flex-shrink: 0;
+    flex-grow: 0;
     white-space: nowrap;
+    min-width: 0;
+    max-width: none;
+    overflow: visible;
 }
 
 .animated-heading .char:nth-child(1) { animation-delay: 0.1s; }
@@ -501,61 +522,77 @@ body {
     50% { transform: translateY(-3px); }
 }
 
-/* Mobile responsive adjustments */
+/* Mobile responsive adjustments - Enhanced with responsive typography */
 @media (max-width: 768px) {
     .animated-heading {
-        font-size: 2.5rem;
-        gap: 2px;
-        letter-spacing: 1px;
+        font-size: clamp(1.8rem, 5vw, 2.5rem);
+        gap: clamp(0.5px, 0.3vw, 2px);
+        letter-spacing: clamp(0.3px, 0.3vw, 1px);
         justify-content: center;
         text-align: center;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         word-break: keep-all;
         white-space: nowrap;
         overflow: hidden;
+        padding: 0 5px;
     }
     
     .animated-heading .char {
-        font-size: 0.9em;
+        font-size: 1em;
         flex-shrink: 0;
+        flex-grow: 0;
     }
 }
 
 @media (max-width: 480px) {
     .animated-heading {
-        font-size: 2rem;
-        gap: 1px;
-        letter-spacing: 0.5px;
+        font-size: clamp(1.4rem, 4.5vw, 2rem);
+        gap: clamp(0.3px, 0.2vw, 1px);
+        letter-spacing: clamp(0.2px, 0.2vw, 0.5px);
         justify-content: center;
         text-align: center;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         word-break: keep-all;
         white-space: nowrap;
         overflow: hidden;
+        padding: 0 3px;
     }
     
     .animated-heading .char {
-        font-size: 0.9em;
+        font-size: 1em;
         flex-shrink: 0;
+        flex-grow: 0;
     }
 }
 
 @media (max-width: 375px) {
     .animated-heading {
-        font-size: 1.8rem;
-        gap: 0.5px;
-        letter-spacing: 0.3px;
+        font-size: clamp(1.2rem, 4vw, 1.8rem);
+        gap: clamp(0.2px, 0.15vw, 0.5px);
+        letter-spacing: clamp(0.1px, 0.15vw, 0.3px);
         justify-content: center;
         text-align: center;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         word-break: keep-all;
         white-space: nowrap;
         overflow: hidden;
+        padding: 0 2px;
     }
     
     .animated-heading .char {
-        font-size: 0.85em;
+        font-size: 1em;
         flex-shrink: 0;
+        flex-grow: 0;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 320px) {
+    .animated-heading {
+        font-size: clamp(1rem, 3.5vw, 1.5rem);
+        gap: clamp(0.1px, 0.1vw, 0.3px);
+        letter-spacing: clamp(0.05px, 0.1vw, 0.2px);
+        padding: 0 1px;
     }
 }
 
@@ -1408,19 +1445,22 @@ body {
     }
 
     .animated-heading {
-        font-size: 2rem;
-        gap: 1px;
+        font-size: clamp(1.4rem, 4.5vw, 2rem);
+        gap: clamp(0.3px, 0.2vw, 1px);
+        letter-spacing: clamp(0.2px, 0.2vw, 0.5px);
         justify-content: center;
         text-align: center;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         word-break: keep-all;
         white-space: nowrap;
         overflow: hidden;
+        padding: 0 3px;
     }
 
     .animated-heading .char {
-        font-size: 0.9em;
+        font-size: 1em;
         flex-shrink: 0;
+        flex-grow: 0;
     }
 }
 
